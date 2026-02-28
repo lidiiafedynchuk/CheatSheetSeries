@@ -177,6 +177,7 @@ ws.on('message', (data, isBinary) => {
 ```
 
 **To prevent message replay attacks** include timestamps or nonces in messages and reject duplicates to ensure old messages cannot be maliciously resent.
+
 ```javascript
 ws.on('message', (data) => {
   const message = JSON.parse(data);
